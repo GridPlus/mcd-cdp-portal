@@ -692,6 +692,7 @@ export default {
     ledger_nano: 'Ledger Nano',
     trezor: 'Trezor',
     dcent: "D'CENT",
+    lattice: 'Lattice1',
     other: 'Active Wallet',
     ledger: 'Ledger',
     walletconnect: 'Wallet Connect',

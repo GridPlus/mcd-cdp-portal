@@ -9,7 +9,12 @@ import { FilledButton } from 'components/Marketing';
 
 import { getWebClientProviderName } from 'utils/web3';
 import useMaker from 'hooks/useMaker';
-import { useLedger, useTrezor, useDcent } from 'hooks/useHardwareWallet';
+import {
+  useLedger,
+  useTrezor,
+  useDcent,
+  useLattice
+} from 'hooks/useHardwareWallet';
 import useLanguage from 'hooks/useLanguage';
 import useBrowserIcon from 'hooks/useBrowserIcon';
 
@@ -18,6 +23,7 @@ import { ReactComponent as LedgerLogo } from 'images/ledger.svg';
 import { ReactComponent as DcentLogo } from 'images/dcent.svg';
 import { ReactComponent as WalletConnectLogo } from 'images/wallet-connect.svg';
 import { ReactComponent as WalletLinkLogo } from 'images/wallet-link.svg';
+import { ReactComponent as LatticeLogo } from 'images/lattice.svg';
 import { ReactComponent as CaratDown } from 'images/carat-down-filled.svg';
 import { AccountTypes } from 'utils/constants';
 import { BrowserView, isMobile } from 'react-device-detect';
@@ -204,6 +210,7 @@ function AccountSelection({ buttonWidth = '213px', ...props }) {
   const { connectTrezorWallet } = useTrezor({ onAccountChosen });
   const { connectDcentWallet } = useDcent({ onAccountChosen });
   const { connectLedgerWallet } = useLedger({ onAccountChosen });
+  const { connectLatticeWallet } = useLattice({ onAccountChosen });
 
   async function connectBrowserWallet() {
     try {
@@ -270,8 +277,19 @@ function AccountSelection({ buttonWidth = '213px', ...props }) {
     </IconItem>
   );
 
+  const lattice = (
+    <IconItem
+      onClick={connectLatticeWallet}
+      disabled={!makerAuthenticated}
+      icon={<LatticeLogo />}
+      key="lattice"
+    >
+      {lang.providers.lattice}
+    </IconItem>
+  );
+
   const mainWallets = [ledger, trezor];
-  const otherWallets = [walletLink, walletConnect, dcent];
+  const otherWallets = [walletLink, walletConnect, dcent, lattice];
 
   const mainWalletsCount = mainWallets.length + 1; // Add the browser provider wallet
 

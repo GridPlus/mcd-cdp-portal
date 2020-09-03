@@ -20,7 +20,8 @@ export const AccountTypes = {
   DCENT: 'dcent',
   METAMASK: 'browser',
   WALLETLINK: 'walletlink',
-  WALLETCONNECT: 'walletconnect'
+  WALLETCONNECT: 'walletconnect',
+  LATTICE: 'lattice'
 };
 
 export const Routes = {

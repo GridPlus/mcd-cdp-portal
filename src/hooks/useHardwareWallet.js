@@ -95,6 +95,24 @@ export function useDcent({ onAccountChosen }) {
   return { connectDcentWallet };
 }
 
+// Helper hook to show lattice connection modals. Only for use in this app.
+export function useLattice({ onAccountChosen }) {
+  const { show } = useModal();
+  const connectLatticeWallet = useCallback(() => {
+    show({
+      modalType: 'hardwareaccountselect',
+      modalProps: {
+        type: AccountTypes.LATTICE,
+        confirmAddress: address => {
+          onAccountChosen({ address }, AccountTypes.LATTICE);
+        }
+      }
+    });
+  }, [show, onAccountChosen]);
+
+  return { connectLatticeWallet };
+}
+
 // Helper hook to show ledger connection modals. Only for use in this app.
 export function useLedger({ onAccountChosen }) {
   const { show } = useModal();
