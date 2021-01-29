@@ -7328,11 +7328,11 @@ eth-json-rpc-middleware@^4.1.4, eth-json-rpc-middleware@^4.1.5:
     safe-event-emitter "^1.0.1"
 
 eth-lattice-keyring@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.2.7.tgz#71884f05593ca2cc11b8f4b4e4671fb55ff3f512"
-  integrity sha512-rKvW1sjrcXD4L7dXs+8yyvPu2WownxYSKWRDGUft/pSJxjfWG5GVCbyHQQx1+J95J1SdYamWzJmoFXNCPPFPzA==
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.2.9.tgz#79849fd8358542031739874b1e3a8be7ade065bc"
+  integrity sha512-3B2/UiQrChaAL/zOqr/g0ALYTupiGqKEqB09OaB4iLW2Yfog4EBzcK3rBdZg0MkYlesTrsN4X9zKFkvLCv3QmQ==
   dependencies:
-    gridplus-sdk latest
+    gridplus-sdk "^0.7.2"
 
 eth-lib@0.2.7:
   version "0.2.7"
@@ -8654,7 +8654,7 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
   integrity sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=
 
-gridplus-sdk@latest:
+gridplus-sdk@^0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.7.2.tgz#ea46c565ea7f8e029b7a61283f25e9f175ddfa47"
   integrity sha512-fCo9QGvpwTVbqobKmkkKQxRA/zgSy5KOfQrRv9jhnmlP4uHvURKuuqnJ07mRZr+0EbGifRJp9VRmZkKjKffp+Q==
